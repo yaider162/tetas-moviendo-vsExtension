@@ -1,26 +1,22 @@
-// The module 'vscode' contains the VS Code extensibility API
-// Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
+import { CounterCommand } from './commands/counter';
+import { DateCommand } from './commands/dateCommand';
+import { StatusBarManager } from './ui/statusBar';
 
-// This method is called when your extension is activated
-// Your extension is activated the very first time the command is executed
+// La funcion activate se llama cuando la extensión es activada
 export function activate(context: vscode.ExtensionContext) {
+	
+	// Inicializar la barra de estado
+	const statusBarManager = new StatusBarManager();
+	statusBarManager.register(context);
 
-	// Use the console to output diagnostic information (console.log) and errors (console.error)
-	// This line of code will only be executed once when your extension is activated
-	console.log('Congratulations, your extension "tetas-moviendo" is now active!');
+	// Inicializar el comando del contador
+	const counterCommand = new CounterCommand(statusBarManager.getStatusBarItem());
+	counterCommand.registerCommand(context);
 
-	// The command has been defined in the package.json file
-	// Now provide the implementation of the command with registerCommand
-	// The commandId parameter must match the command field in package.json
-	const disposable = vscode.commands.registerCommand('tetas-moviendo.helloWorld', () => {
-		// The code you place here will be executed every time your command is executed
-		// Display a message box to the user
-		vscode.window.showInformationMessage('Hello World from tetas_moviendo!');
-	});
-
-	context.subscriptions.push(disposable);
+	// Registrar el comando de fecha
+	DateCommand.registerCommand(context);
 }
 
-// This method is called when your extension is deactivated
+// Esta función se llama cuando la extensión es desactivada
 export function deactivate() {}

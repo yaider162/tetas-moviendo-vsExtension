@@ -1,21 +1,22 @@
 {
   "name": "tetas-moviendo",
   "displayName": "tetas_moviendo",
-  "description": "",
+  "description": "Extension que muestra tetas moviendose en el editor",
   "version": "0.0.1",
-  "engines": {
-    "vscode": "^1.101.0"
-  },
-  "categories": [
-    "Other"
-  ],
-  "activationEvents": [],
+  "author": {"name": "Bombondecanela"},
+  "engines": {"vscode": "^1.101.0"},
+  "categories": ["Themes"],
+  "activationEvents": ["onStartupFinished"],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "tetas-moviendo.helloWorld",
-        "title": "Hello World"
+        "command": "prueba",
+        "title": "Tiempo actual"
+      },
+      {
+        "command": "incrementar_contador",
+        "title": "Incrementar contador"
       }
     ]
   },
