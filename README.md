@@ -1,16 +1,13 @@
-# tetas-moviendo README
-
-This is the README for your extension "tetas-moviendo". After writing up a brief description, we recommend including the following sections.
+# tetas-moviendo
+Mod inspirado en las palabras de un amigo cercano, con el fin de ofender a quien pueda ofenderse.
 
 ## Features
+Primera versión del proyecto antes de empezar con los gif de distintos personajes planeo meter un gatico
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+<img src="src/media/gato.gif" alt="Gato Demo" width="150">
 
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+## Demo de funcionamiento
+Aquí puedes ver la extensión en acción:
 
 ## Requirements
 
@@ -30,5 +27,4 @@ This extension contributes the following settings:
 ## Release Notes
 
 ### 1.0.0
-
-Lanzamiento inicial de la extensión
+Lanzamiento inicial de la extensión - Gatico gif para desarrollo
